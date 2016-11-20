@@ -1,0 +1,818 @@
+/*=======================================*\
+ * List of imports
+\*=======================================*/
+/**
+ * Universal classes are meant to be used in 
+ * the HTML|PHP files for quick usage
+ */
+/*=======================================*\
+ * ## Universal Classes
+\*=======================================*/
+.clearfix {
+  display: block;
+  content: '';
+  clear: both;
+}
+
+.width-setter {
+  max-width: 80em;
+  margin: 0 auto;
+}
+
+/**
+ * Styling for generic settings, such as-
+ * - font family|size|weight, color
+ * - line height
+ * - anchor color for link|visited|hover|active
+ * - input field  
+ * - tags such as strong, pre, code
+ */
+body {
+  font-family: lora, serif;
+  font-size: 1em;
+  line-height: 1.5;
+  background-color: #f1f3f4;
+  color: #373d3f;
+}
+
+a {
+  color: #da621e;
+  text-decoration: none;
+}
+a:visited {
+  color: #c2571a;
+}
+a:hover {
+  color: #f58b4c;
+}
+a:active {
+  color: #c2571a;
+}
+a:focus {
+  color: #c2571a;
+}
+
+blockquote {
+  color: #000;
+  font-size: 1.4rem;
+  font-style: italic;
+}
+
+/*==================================*\
+ * ## Form
+\*==================================*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  border: 2px solid #dcdcdc;
+  background-color: transparent;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  font-family: inconsolata, serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  outline: 0;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+  background-color: #f5f5f5;
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+  background-color: #eee;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+  font-family: lora, serif;
+  border: 2px solid #dcdcdc;
+  background-color: #eee;
+  padding: .5rem 1rem;
+  line-height: 1.5;
+  outline: 0;
+}
+
+select {
+  border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  color: #111;
+  background-color: #f5f5f5;
+}
+
+textarea {
+  width: 100%;
+}
+
+/**
+ * Styling for 'header.php'
+ * Styling for navigation menu must
+ * be inside 'navigation.scss'.
+ */
+.ham-button {
+  display: none;
+}
+
+.site-header {
+  background-color: #fff;
+  border-bottom: 1px solid #dcdcdc;
+}
+.site-header .logo-and-menu {
+  display: flex;
+  justify-content: center;
+}
+.site-header .site-branding {
+  position: relative;
+  width: 25%;
+  align-self: center;
+}
+.site-header .site-branding img {
+  display: block;
+  max-width: 180px;
+}
+.site-header .site-title {
+  font-style: italic;
+  margin: 0;
+}
+.site-header .site-description {
+  margin: 0;
+}
+.site-header .main-navigation {
+  align-self: flex-end;
+  width: 75%;
+}
+.site-header .main-navigation .menu {
+  float: right;
+}
+
+@media (max-width: 64em) {
+  .ham-button {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: -webkit-translate(0, -50%);
+    transform: -moz-translate(0, -50%);
+    transform: -ms-translate(0, -50%);
+    transform: -o-translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+  }
+  .ham-button > span {
+    width: auto;
+    height: auto;
+    font-size: 2.25rem;
+  }
+  .ham-button > span:hover {
+    color: #c2571a;
+  }
+
+  .site-header .logo-and-menu {
+    flex-direction: column;
+  }
+
+  .site-header .site-branding {
+    width: 100%;
+  }
+  .site-header .site-branding img {
+    margin: 0 auto;
+  }
+
+  .site-header .main-navigation {
+    width: 100%;
+  }
+
+  .site-header .main-navigation .menu {
+    float: none;
+  }
+
+  .site-header .main-navigation ul li {
+    float: none;
+    margin-left: 0;
+  }
+}
+/**
+ * Styling for 'footer.php'
+ */
+.site-footer {
+  background-color: #e5e5e5;
+}
+.site-footer .site-info {
+  text-align: center;
+  font-size: 0.85em;
+}
+.site-footer .theme-name {
+  font-family: lato, sans-serif;
+  font-weight: 600;
+}
+
+/**
+ * Styling for everything that lies between 
+ * the header and footer sections.
+ */
+/*=======================================*\
+ * ## Content 
+\*=======================================*/
+#content:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+#content #secondary {
+  padding-right: 0;
+}
+
+/*=======================================*\
+ * ## Content Styling
+\*=======================================*/
+#content .post-thumbnail {
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+#content .post-thumbnail img {
+  display: block;
+}
+#content .site-main > article {
+  background-color: #fff;
+  padding: 2em 3em;
+  border: 1px solid #dcdcdc;
+  margin-bottom: 0;
+}
+#content .entry-header {
+  overflow: hidden;
+}
+#content .entry-title {
+  margin: 0;
+}
+#content .entry-title a {
+  color: #222233;
+}
+#content .entry-meta {
+  font-family: Inconsolata, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-top: .8em;
+  display: inline-block;
+  border-bottom: 1px solid rgba(205, 89, 74, 0.34);
+  padding-bottom: .2rem;
+  font-weight: 600;
+}
+#content .entry-content ul, #content .entry-content ol {
+  margin-left: 0;
+}
+#content .entry-footer {
+  font-family: inconsolata, sans-serif;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+#content .entry-footer > span {
+  display: block;
+  position: relative;
+  margin-left: 1.2rem;
+}
+#content .entry-footer > span:before {
+  position: absolute;
+  left: -1.2rem;
+  font-family: dashicons;
+  vertical-align: bottom;
+}
+#content .entry-footer .cat-links:before {
+  content: '\f318';
+}
+#content .entry-footer .tags-links:before {
+  content: '\f323';
+}
+#content .entry-footer .comments-link:before {
+  content: '\f473';
+}
+#content .entry-footer .edit-link:before {
+  content: '\f464';
+}
+#content .post-navigation,
+#content .posts-navigation {
+  background-color: #2f2c29;
+  border: 1px solid #dcdcdc;
+  border-top: none;
+}
+#content .post-navigation .nav-links .nav-previous,
+#content .posts-navigation .nav-links .nav-previous {
+  padding: 1rem;
+}
+#content .post-navigation .nav-links .nav-previous a:before,
+#content .posts-navigation .nav-links .nav-previous a:before {
+  content: '\f141';
+  font-family: dashicons;
+  vertical-align: bottom;
+}
+#content .post-navigation .nav-links .nav-next,
+#content .posts-navigation .nav-links .nav-next {
+  padding: 1rem;
+}
+#content .post-navigation .nav-links .nav-next a:after,
+#content .posts-navigation .nav-links .nav-next a:after {
+  content: '\f139';
+  font-family: dashicons;
+  vertical-align: bottom;
+}
+#content .post-navigation {
+  text-align: center;
+  font-weight: 600;
+}
+#content .posts-navigation {
+  text-transform: uppercase;
+  font-family: inconsolata;
+  font-weight: 600;
+  letter-spacing: 4px;
+  border-top: 1px solid #dcdcdc;
+  margin-bottom: 2em;
+}
+#content .posts-navigation .nav-links:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+#content .posts-navigation .nav-links > div {
+  width: 50%;
+}
+#content .posts-navigation .nav-links .nav-previous {
+  float: left;
+  text-align: left;
+}
+#content .posts-navigation .nav-links .nav-next {
+  float: right;
+  text-align: right;
+}
+
+.error404 {
+  text-align: center;
+}
+.error404 .error404-message {
+  margin: 0;
+  margin-bottom: 2rem;
+}
+.error404 .sad-face {
+  margin-bottom: 2rem;
+  color: #ccc;
+  font-family: lato, sans-serif;
+  font-size: 6em;
+  font-weight: 600;
+}
+.error404 .visit-home {
+  margin-bottom: 2rem;
+}
+.error404 .or {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/*=======================================*\
+ * Sidebar
+\*=======================================*/
+#content .widget {
+  margin-bottom: 1em;
+  padding: 1em;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+}
+#content .widget:last-child {
+  margin-bottom: 0;
+}
+#content .widget ul, #content .widget ol {
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+}
+#content .widget li {
+  position: relative;
+  padding-left: 1.3em;
+}
+#content .widget li a {
+  display: block;
+  margin-bottom: .5rem;
+}
+#content .widget li:before {
+  position: absolute;
+  content: '\f460';
+  font-family: dashicons;
+  vertical-align: bottom;
+  left: 0;
+}
+#content .widget .widget-title {
+  padding-left: 1rem;
+  border-left: 5px solid #da621e;
+}
+#content .widget_calendar caption {
+  margin-bottom: 1em;
+  padding-bottom: .25em;
+  font-weight: 600;
+  font-size: 1.25em;
+  border-bottom: 1px solid #da621e;
+}
+#content .widget_calendar td {
+  text-align: center;
+  padding: .25em;
+}
+#content .widget_calendar #today {
+  background-color: #2f2c29;
+  color: #fff;
+}
+#content .widget_calendar #prev {
+  padding: .25rem .5rem;
+  font-family: lato, sans-serif;
+  font-weight: 700;
+  text-align: left;
+}
+#content .widget_calendar #prev a {
+  color: #373d3f;
+}
+#content .widget_calendar #next {
+  padding: .25rem .5rem;
+  font-family: lato, sans-serif;
+  font-weight: 700;
+  text-align: right;
+}
+#content .widget_calendar #next a {
+  color: #373d3f;
+}
+#content .widget_tag_cloud a[class^="tag-link"] {
+  display: inline-block;
+  font-size: 1rem !important;
+  border: 2px solid #373d3f;
+  color: #373d3f;
+  padding: .25rem .5rem;
+  margin-bottom: 4px;
+  font-family: lato, sans-serif;
+  font-weight: 700;
+}
+#content .widget_tag_cloud a[class^="tag-link"]:hover {
+  background-color: #eee;
+}
+
+#comments {
+  margin-top: 1em;
+}
+#comments h2.comments-title {
+  padding: 0 1rem;
+  font-size: 1.25rem;
+}
+#comments ul, #comments ol {
+  margin-left: 0;
+  padding-left: 1em;
+  list-style-type: none;
+}
+#comments .comment-form label {
+  display: block;
+}
+#comments .comment-author > * {
+  display: inline-block;
+  vertical-align: middle;
+}
+#comments .comment-metadata {
+  font-family: inconsolata, monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  border-bottom: 1px solid rgba(205, 89, 74, 0.34);
+  padding-bottom: .2rem;
+  font-weight: 600;
+}
+#comments .comment-body {
+  padding: 1em;
+  background-color: #fff;
+  margin-bottom: 1em;
+}
+#comments .byuser .comment-body {
+  border: 1px dotted #da621e;
+}
+
+#respond {
+  padding: 1em 3em;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+}
+
+@media (max-width: 64em) {
+  #content .site-main > article {
+    padding: 2em 1em;
+    border-right: none;
+    border-left: none;
+  }
+
+  #comments {
+    border-right: none;
+    border-left: none;
+  }
+
+  #respond {
+    margin-bottom: 2em;
+    padding: 1em;
+  }
+
+  #content #secondary {
+    padding-left: 0;
+  }
+
+  #content #secondary > div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-top: 1px solid #dcdcdc;
+  }
+
+  #content .widget {
+    margin-bottom: 0;
+    width: 50%;
+    border: none;
+    border-bottom: 1px solid #dcdcdc;
+  }
+  #content .widget:nth-of-type(odd) {
+    border-right: 1px solid #dcdcdc;
+  }
+}
+@media (max-width: 40em) {
+  #content .widget {
+    width: 100%;
+    border-left: none;
+    border-right: none;
+  }
+  #content .widget:nth-of-type(odd) {
+    border-right: none;
+  }
+}
+/**
+ * Although the navigation menu is a part
+ * of 'header.php', the CSS for menu can
+ * grow very big in size. Hence a dedicated
+ * stylesheet for navigation menu is advised.
+ */
+.main-navigation {
+  font-family: lato, sans-serif;
+  font-weight: 600;
+}
+.main-navigation ul, .main-navigation ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.main-navigation a {
+  color: #333;
+  display: block;
+  padding: 1em 0;
+}
+.main-navigation ul:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.main-navigation ul li {
+  position: relative;
+  float: left;
+  margin-left: 2em;
+}
+.main-navigation ul li:hover ul {
+  display: block;
+}
+.main-navigation ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background-color: #fff;
+  border: 1px solid #dcdcdc;
+  border-top: none;
+}
+.main-navigation ul ul li {
+  float: none;
+  margin-left: 0;
+}
+.main-navigation ul ul li:hover {
+  background-color: #f5f5f5;
+}
+.main-navigation ul ul li a {
+  padding: .5em 1em;
+}
+.main-navigation .current-menu-item {
+  position: relative;
+}
+.main-navigation .current-menu-item:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: #da621e;
+}
+
+@media (max-width: 64em) {
+  .reveal {
+    display: block !important;
+  }
+
+  .main-navigation {
+    display: none;
+  }
+
+  .main-navigation ul ul {
+    display: block;
+    position: relative;
+    width: 100%;
+    border: none;
+    border-left: 2px solid #da621e;
+    margin-left: 1em;
+  }
+
+  .main-navigation .current-menu-item:after {
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+  }
+
+  .main-navigation a {
+    padding: .5em 1em;
+  }
+
+  .site-header .main-navigation .menu {
+    padding: .5em 0;
+  }
+}
+/*==================================*\
+ * ## Blog
+\*==================================*/
+.blog #content .entry-title {
+  font-size: 1.35em;
+  line-height: 1.4;
+  margin: 0;
+}
+.blog #content .site-main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.blog #content .post {
+  position: relative;
+  width: 50%;
+  padding: 1rem;
+  margin-bottom: 0;
+  border: 1px solid #dcdcdc;
+  border-bottom: none;
+  background-color: #fff;
+}
+.blog #content .post:hover {
+  background-color: #f5f5f5;
+}
+.blog #content .post:nth-of-type(even) {
+  border-left: none;
+}
+.blog #content .entry-content {
+  margin: 0;
+  margin-bottom: 2.25em;
+}
+
+/*==================================*\
+ * ## Archive and Search
+\*==================================*/
+.archive .page-title,
+.search .page-title {
+  margin-top: 0;
+}
+.archive #content .site-main > article,
+.search #content .site-main > article {
+  margin-bottom: 1em;
+}
+.archive #content .site-main > article:hover,
+.search #content .site-main > article:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 64em) {
+  .blog #content .post {
+    border-left: none;
+    border-right: none;
+  }
+}
+@media (max-width: 40em) {
+  .blog #content .post {
+    width: 100%;
+  }
+}
+.post-format-icon {
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+}
+.post-format-icon a {
+  color: #373d3f;
+}
+.post-format-icon .dashicons,
+.post-format-icon .dashicons-before:before {
+  width: auto;
+  height: auto;
+  font-size: 1.8em;
+}
+
+.blog a.read-more {
+  display: inline-block;
+  background-color: #2f2c29;
+  color: #fff;
+  font-family: inconsolata;
+  padding: .1em .5em;
+  text-transform: uppercase;
+  font-size: 0.80em;
+  margin-bottom: 0.5em;
+}
+
+.blog .format-aside .entry-header,
+.blog .format-quote .entry-header {
+  width: calc( 100% - 40px );
+}
+
+/*==================================*\
+ * ## Aside
+\*==================================*/
+.blog #content .post.format-aside {
+  background: repeating-linear-gradient(-40deg, #fff, #fff 10px, #f5f5f5 10px, #f5f5f5 11px);
+}
+
+/*==================================*\
+ * ## Quote
+\*==================================*/
+.blog #content .post.format-quote .entry-content {
+  color: #000;
+  font-style: italic;
+  font-size: 1.4rem;
+}
+.blog #content .post.format-quote .entry-content p {
+  margin-bottom: 0;
+}
+.blog #content .post.format-quote .quote-author {
+  display: block;
+  margin-top: 1rem;
+  text-align: right;
+  font-size: 1rem;
+  font-style: normal;
+}
+.blog #content .post.format-quote .quote-author:before {
+  content: '\f460';
+  font-family: dashicons;
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+
+/*==================================*\
+ * ## Status
+\*==================================*/
+.blog #content .post.format-status .entry-content {
+  font-family: lato, sans-serif;
+}
+
+/*# sourceMappingURL=main.css.map */
